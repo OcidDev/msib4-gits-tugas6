@@ -12,12 +12,26 @@ class DashboardController extends Controller
         return view('pages.dashboard.index');
     }
 
-    public function logout(){
-        Session::flush();
-
-        Auth::logout();
-
-        return redirect('login');
-
+    public function category(){
+        return view('pages.dashboard.category.index');
     }
+
+    public function product(){
+        return view('pages.dashboard.product.index');
+    }
+
+    public function user(){
+        return view('pages.dashboard.user.index');
+    }
+
+
+
+    public function logout(Request $request)
+{
+    Auth::guard('web')->logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+
+    return redirect('/');
+}
 }

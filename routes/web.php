@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('login');
 });
 
 
@@ -42,6 +42,12 @@ Route::prefix('/dashboard')->middleware([
     Route::get('/product', [DashboardController::class,'product'])->name('dashboard.product');
     Route::get('/user', [DashboardController::class,'user'])->name('dashboard.user');
     Route::get('/user/{id}/edit', [DashboardController::class,'edit_user'])->name('dashboard.edit_user');
-    Route::get('/logout', [DashboardController::class,'logout'])->name('dashboard.logout');
+    // Route::get('/logout', [DashboardController::class,'logout'])->name('dashboard.logout');
 
 });
+Route::post('/logout', [DashboardController::class, 'logout'])->name('logout')->middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+]);
+
