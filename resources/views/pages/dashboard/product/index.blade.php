@@ -1,8 +1,16 @@
 @extends('layouts.dashboard')
 @section('title')
-Dashboard
+Product
 @endsection
+
+@push('after-style')
+   @livewireStyles
+@endpush
 
 @section('content')
-
+<h1>Product</h1>
 @endsection
+
+@push('before-script')
+    @livewireScripts
+@endpush

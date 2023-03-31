@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 @section('title')
-    Category
+    Category Edit
 @endsection
 
 @push('after-style')
@@ -9,17 +9,14 @@
 @endpush
 
 @section('content')
-    <h1 class="mb-5">Category</h1>
-    <div class="row mb-4">
-        <div class="col-md-8">
-            @livewire('form-category')
+    <div class="container">
+        <div class="mb-4">
+            <a href="{{ route('dashboard.category') }}" class="btn btn-primary">Back</a>
         </div>
-
-    </div>
-
-    <div class="card">
-        <div class="card-body">
-            @livewire('table-category')
+        <div class="row mb-4">
+            <div class="col-md-8">
+                @livewire('edit-category',['category'=>$category_edit])
+            </div>
         </div>
     </div>
 @endsection

@@ -20,7 +20,7 @@
                         <td><img src="{{ asset('storage/'.$item->icon) }}" class="img-thumbnail rounded-top" style="width:100px" alt=""></td>
                         <td>
                             <a href="#" class="btn btn-primary">Detail</a>
-                            <a href="#" class="btn btn-warning">Edit</a>
+                            <a href="{{ route('dashboard.category_edit',$item->id) }}" class="btn btn-warning">Edit</a>
                             <a href="" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
