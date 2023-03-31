@@ -2,12 +2,7 @@
     <div class="card">
          <div class="card-header">Form</div>
             <div class="card-body">
-                @if (session()->has('success'))
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        {{ session('success') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
+                @include('my_components.alert_succes')
             <form wire:submit.prevent="store">
             <div class="mb-3">
                 <label for="name" class="form-label">Category Name</nav></label>

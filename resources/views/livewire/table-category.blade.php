@@ -21,7 +21,7 @@
                         <td>
                             <a href="#" class="btn btn-primary">Detail</a>
                             <a href="{{ route('dashboard.category_edit',$item->id) }}" class="btn btn-warning">Edit</a>
-                            <a href="" class="btn btn-danger">Delete</a>
+                            <button wire:click="delete({{ $item->id }})" class="btn btn-danger">Delete</button>
                         </td>
                     </tr>
                     @endforeach

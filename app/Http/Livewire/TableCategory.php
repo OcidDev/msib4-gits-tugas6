@@ -13,4 +13,9 @@ class TableCategory extends Component
             'users' => Category::orderBy('id','desc')->get()
         ]);
     }
+    public function delete($id){
+        $category = Category::find($id);
+        $category->delete();
+        session()->flash('success','Category berhasil terhapus');
+    }
 }

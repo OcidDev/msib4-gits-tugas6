@@ -7,12 +7,7 @@
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</nav></label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" wire:model="name">
-                    @error('name')
-                        <span class="text-danger"></span>
-                        <div class="invalid-feedback">
-                            {{ $message  }}
-                        </div>
-                     @enderror
+                    @include('my_components.alert_succes')
                  </div>
                  <div class="mb-3">
                     <label for="description" class="form-label">Description Adress</nav></label>
