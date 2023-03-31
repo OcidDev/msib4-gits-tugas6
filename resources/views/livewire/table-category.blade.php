@@ -1,5 +1,6 @@
 <div>
     <div class="card">
+        @include('my_components.alert_succes')
         <div class="card-body">
             <table class="table table-responsive">
                 <thead>

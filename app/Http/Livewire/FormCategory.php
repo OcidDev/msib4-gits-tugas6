@@ -39,6 +39,7 @@ class FormCategory extends Component
         $this->icon = NULL;
 
         session()->flash('success','User Berhasil Dibuat');
+        $this->emit('CreateCategory');
     }
 
 

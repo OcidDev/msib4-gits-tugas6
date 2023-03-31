@@ -7,6 +7,7 @@ use App\Models\Category;
 
 class TableCategory extends Component
 {
+    protected $listeners = ['CreateCategory' => 'render'];
     public function render()
     {
         return view('livewire.table-category',[
