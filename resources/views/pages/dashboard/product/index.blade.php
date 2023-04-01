@@ -1,14 +1,20 @@
 @extends('layouts.dashboard')
 @section('title')
-Product
+    Product
 @endsection
 
 @push('after-style')
-   @livewireStyles
+    @livewireStyles
 @endpush
 
 @section('content')
-<h1>Product</h1>
+    <h1 class="mb-5">Product</h1>
+    <div class="row mb-4">
+        <div class="col-md-8">
+            @livewire('product-form')
+        </div>
+
+    </div>
 @endsection
 
 @push('before-script')

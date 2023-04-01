@@ -16,7 +16,7 @@ class EditCategory extends Component
 
     public function mount($category)
     {
-    $this->category_id = $category->id;
+        $this->category_id = $category->id;
        $this->name = $category->name;
        $this->description = $category->description;
        $this->icon = $category->icon;

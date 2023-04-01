@@ -5,7 +5,7 @@
                 @include('my_components.alert_succes')
             <form wire:submit.prevent="store">
             <div class="mb-3">
-                <label for="name" class="form-label">Category Name</nav></label>
+                <label for="name" class="form-label">Category Name</label>
                 <input type="text" class="form-control @error('name') is-invalid @enderror" wire:model="name">
                 @error('name')
                     <span class="text-danger"></span>
@@ -15,7 +15,7 @@
                  @enderror
              </div>
              <div class="mb-3">
-                <label for="description" class="form-label">Category Description</nav></label>
+                <label for="description" class="form-label">Category Description</label>
                 <input type="text" class="form-control @error('description') is-invalid @enderror" wire:model="description">
                 @error('description')
                     <span class="text-danger"></span>
@@ -25,7 +25,7 @@
                  @enderror
             </div>
             <div class="mb-3">
-                <label for="icon" class="form-label">Category Icon</nav></label>
+                <label for="icon" class="form-label">Category Icon</label>
                 <input type="file" class="form-control @error('icon') is-invalid @enderror" wire:model="icon">
                 @error('icon')
                     <span class="text-danger"></span>
