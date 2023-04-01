@@ -14,7 +14,6 @@
         <div class="col-md-8">
             @livewire('form-category')
         </div>
-
     </div>
 
     <div class="card">

@@ -25,6 +25,10 @@ class DashboardController extends Controller
     public function product(){
         return view('pages.dashboard.product.index');
     }
+    public function product_edit($id){
+        $product_edit = Product::findOrFail($id);
+        return view('pages.dashboard.product.edit');
+    }
 
     public function user(){
         return view('pages.dashboard.user.index');

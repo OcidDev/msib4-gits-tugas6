@@ -6,22 +6,24 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Category Name</th>
-                        <th>Category Description</th>
-                        <th>Icon</th>
+                        <th>Product Name</th>
+                        <th>Product Description</th>
+                        <th>Photo</th>
+                        <th>price</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($categories as $index => $item)
+                    @foreach ($products as $index => $item)
                     <tr>
                         <td>{{ $index + 1 }}</td>
                         <td>{{ $item->name }}</td>
                         <td>{{ $item->description }}</td>
-                        <td><img src="{{ asset('storage/'.$item->icon) }}" class="img-thumbnail rounded-top" style="width:100px" alt=""></td>
+                        <td><img src="{{ asset('storage/'.$item->photo) }}" class="img-thumbnail rounded-top" style="width:100px" alt=""></td>
+                        <td>{{ $item->price }}</td>
                         <td>
                             <a href="#" class="btn btn-primary">Detail</a>
-                            <a href="{{ route('dashboard.category_edit',$item->id) }}" class="btn btn-warning">Edit</a>
+                            <a href="{{ route('dashboard.product_edit',$item->id) }}" class="btn btn-warning">Edit</a>
                             <button wire:click="delete({{ $item->id }})" class="btn btn-danger">Delete</button>
                         </td>
                     </tr>

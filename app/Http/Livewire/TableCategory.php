@@ -10,9 +10,8 @@ class TableCategory extends Component
     protected $listeners = ['CreateCategory' => 'render'];
     public function render()
     {
-        return view('livewire.table-category',[
-            'users' => Category::orderBy('id','desc')->get()
-        ]);
+        $this->categories = Category::orderBy('id','desc')->get();
+        return view('livewire.table-category');
     }
     public function delete($id){
         $category = Category::find($id);

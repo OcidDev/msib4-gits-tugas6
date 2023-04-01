@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="photo" class="form-label">Category Photo</label>
+                    <label for="photo" class="form-label">Product Photo</label>
                     <input type="file" class="form-control @error('photo') is-invalid @enderror" wire:model="photo">
                     @error('photo')
                         <span class="text-danger"></span>
