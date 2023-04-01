@@ -2,6 +2,7 @@
     <div class="card">
         <div class="card-header">Form</div>
         <div class="card-body">
+            @include('my_components.alert_succes')
             <form wire:submit.prevent="store">
                 <div class="mb-3">
                     <label for="categoriesid" class="form-label">Choose Category</label>
