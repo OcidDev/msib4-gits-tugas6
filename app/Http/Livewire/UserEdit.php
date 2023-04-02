@@ -8,14 +8,12 @@ use Livewire\Component;
 class UserEdit extends Component
 {
     public $user_id;
-    public $name;
-    public $email;
 
-    public function mount($user)
+    public function mount($user_edit)
     {
-        $this->user_id = $user->id;
-       $this->name = $user->name;
-       $this->email = $user->email;
+        $this->user_id = $user_edit->id;
+        $this->name = $user_edit->name;
+        $this->email = $user_edit->email;
     }
     public function render()
     {
@@ -35,6 +33,6 @@ class UserEdit extends Component
         $this->name = NULL;
         $this->email = NULL;
 
-        redirect()->route('users.home')->with('success','User Berhasil di Update');
+        redirect()->route('dashboard.user')->with('success','User Berhasil di Update');
     }
 }

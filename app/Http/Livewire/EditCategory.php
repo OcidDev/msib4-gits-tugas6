@@ -11,15 +11,13 @@ class EditCategory extends Component
 {
     use WithFileUploads;
     public $category_id;
-    public $name;
-    public $email;
 
     public function mount($category)
     {
         $this->category_id = $category->id;
-       $this->name = $category->name;
-       $this->description = $category->description;
-       $this->icon = $category->icon;
+        $this->name = $category->name;
+        $this->description = $category->description;
+        $this->icon = $category->icon;
     }
     public function render()
     {
